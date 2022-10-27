@@ -153,4 +153,4 @@ function getMyLocation(event) {
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getMyLocation);
 
-search("Seattle");
+search("New York");
