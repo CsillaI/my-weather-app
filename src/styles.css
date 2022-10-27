@@ -11,6 +11,10 @@ body {
   margin-top: 20px;
 }
 
+.git-link {
+  text-decoration: none;
+}
+
 .sunny-picture {
   width: 350px;
   border-radius: 0.375rem;
