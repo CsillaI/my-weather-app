@@ -126,7 +126,7 @@ h3 .big-sun-emoji {
 
 h4 {
   max-width: 450px;
-  text-align: right;
+  text-align: center;
   font-size: 18px;
 }
 .today {
@@ -181,8 +181,8 @@ h4 {
   font-weight: 700;
 }
 hr {
-  width: 160px;
-  margin-left: 260px;
+  width: 420px;
+  margin-left: 0;
 }
 h5 {
   font-size: 25px;
