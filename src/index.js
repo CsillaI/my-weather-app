@@ -120,7 +120,9 @@ function showCurrentLocation(response) {
 
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
-
+  
+  //document.querySelector("#feels-like-main").innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)}&degC`;
+   //needs work 
   document.querySelector("#wind-main").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} Km/h`;
