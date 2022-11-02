@@ -78,6 +78,7 @@ celsius.addEventListener("click", showCelsius);
 //Search Engine
 
 function showWeather(response) {
+  console.log(response);
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -85,13 +86,17 @@ function showWeather(response) {
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
 
-  document.querySelector("#wind-main").innerHTML = `Wind: ${Math.round(
+  document.querySelector("#feels-like-main").innerHTML = `${Math.round(
+    response.data.main.feels_like
+  )}&degC`;
+
+  document.querySelector("#wind-main").innerHTML = `${Math.round(
     response.data.wind.speed
   )} Km/h`;
 
   document.querySelector(
     "#humidity-main"
-  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  ).innerHTML = `${response.data.main.humidity}%`;
 
   document.querySelector("#city").innerHTML = response.data.name;
 }
@@ -112,27 +117,6 @@ function handleSubmit(event) {
 
 let searchCity = document.querySelector("#search-city");
 searchCity.addEventListener("submit", handleSubmit);
-
-function showCurrentLocation(response) {
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-
-  document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].description;
-  
-  //document.querySelector("#feels-like-main").innerHTML = `Feels like: ${Math.round(response.data.main.feels_like)}&degC`;
-   //needs work 
-  document.querySelector("#wind-main").innerHTML = `Wind: ${Math.round(
-    response.data.wind.speed
-  )} Km/h`;
-
-  document.querySelector(
-    "#humidity-main"
-  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
-
-  document.querySelector("#city").innerHTML = response.data.name;
-}
 
 //Current Button
 
