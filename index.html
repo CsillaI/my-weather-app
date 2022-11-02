@@ -73,27 +73,41 @@
                 ></span>
               </p>
 
-            <div class="d-flex">
-              <h3>
-                <i
-                  class="fa-solid fa-sun big-sun-emoji"
-                  id="main-weather-icon"
-                ></i>
-              </h3>
-            <div>
-            <h4>
-                <div class="today" id="current-day"></div>
-                <div class="date-main" id="current-date"></div>
-                <div class="time-main" id="current-time">T</div>
-                <hr />
-                <div class="feels-like-main" id="feels-like-main">25C</div>
-                <div class="wind-main" id="wind-main">Wind:</div>
-                <div class="humidity-main" id="humidity-main">Humidity:</div>
-              </h4>
+              <div class="d-flex">
+                <h3>
+                  <i
+                    class="fa-solid fa-sun big-sun-emoji"
+                    id="main-weather-icon"
+                  ></i>
+                </h3>
+                <div>
+                  <h4>
+                    <div class="today" id="current-day"></div>
+                    <div class="date-main" id="current-date">
+                      <span class="time-main" id="current-time">T</span>
+                    </div>
+                    <div class="time-main" id="current-time">T</div>
+                    <hr />
+                    <div class="row justify-content-evenly more-details">
+                      <div class="col-3 more-details-boxes">
+                        Feels like:
+                        <div class="feels-like-main" id="feels-like-main">
+                          25C
+                        </div>
+                      </div>
+                      <div class="col-3 more-details-boxes">
+                        Wind:
+                        <div class="wind-main" id="wind-main">10 km/h</div>
+                      </div>
+                      <div class="col-3 more-details-boxes">
+                        Humidity:
+                        <div class="humidity-main" id="humidity-main">80%</div>
+                      </div>
+                    </div>
+                  </h4>
+                </div>
+              </div>
             </div>
-            </div>
-            </div>
-            
           </div>
           <div class="row cards">
             <div class="col">

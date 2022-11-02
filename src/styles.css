@@ -174,11 +174,14 @@ h4 {
     rgb(245, 133, 73) 80%
   );
 }
-.precipitation,
-.humidity-main,
-.wind-main {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 700;
+
+.more-details-boxes {
+  font-weight: bold;
+}
+.feels-like-main,
+.wind-main,
+.humidity-main {
+  font-weight: 400;
 }
 hr {
   width: 420px;
