@@ -53,44 +53,55 @@
               </form>
 
               <h1 id="city"></h1>
-              <h2>
-                <span class="temperature-main" id="temperature"></span
-                ><a href="#" class="celsius" id="celsius">&deg;C|</a
-                ><a href="#" class="fahrenheit" id="fahrenheit">&deg;F</a>
-              </h2>
-              <p>
-                <span
-                  class="weather-description"
-                  id="weather-description"
-                ></span>
-              </p>
+              <div class="row">
+                <div class="col-6 temperature-description-wrapper">
+                  <h2>
+                    <span class="temperature-main" id="temperature"></span
+                    ><a href="#" class="celsius" id="celsius">&deg;C|</a
+                    ><a href="#" class="fahrenheit" id="fahrenheit">&deg;F</a>
+                  </h2>
+                  <p>
+                    <span
+                      class="weather-description"
+                      id="weather-description"
+                    ></span>
+                  </p>
+                </div>
+                <div class="col-6 time-date-wrapper">
+                  <div class="today" id="current-day"></div>
+                  <div class="date-main" id="current-date">
+                    <span class="time-main" id="current-time">T</span>
+                  </div>
+                  <div class="time-main" id="current-time">T</div>
+                </div>
+              </div>
 
-              <div class="d-flex">
-                <h3>
-                  <i
-                    class="fa-solid fa-sun big-sun-emoji"
-                    id="main-weather-icon"
-                  ></i>
-                </h3>
-                <div>
+              <div class="row">
+                <div class="col-6 main-weather-icon-wrapper">
+                  <h3>
+                    <i
+                      class="fa-solid fa-sun main-weather-icon"
+                      id="main-weather-icon"
+                    ></i>
+                  </h3>
+                </div>
+                <div
+                  class="col-6 justify-content-evenly more-weather-details-wrapper"
+                >
                   <h4>
-                    <div class="today" id="current-day"></div>
-                    <div class="date-main" id="current-date">
-                      <span class="time-main" id="current-time">T</span>
-                    </div>
-                    <div class="time-main" id="current-time">T</div>
-                    <hr />
-                    <div class="row justify-content-evenly more-details">
+                    <div class="column justify-content-evenly more-details">
                       <div class="col-3 more-details-boxes">
                         Feels like:
                         <div class="feels-like-main" id="feels-like-main">
                           25C
                         </div>
                       </div>
+                      <br />
                       <div class="col-3 more-details-boxes">
                         Wind:
                         <div class="wind-main" id="wind-main">10 km/h</div>
                       </div>
+                      <br />
                       <div class="col-3 more-details-boxes">
                         Humidity:
                         <div class="humidity-main" id="humidity-main">80%</div>
