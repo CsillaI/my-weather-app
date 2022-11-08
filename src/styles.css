@@ -68,19 +68,28 @@ h3 {
 }
 h1 {
   padding-top: 20px;
-  font-size: 4.5rem;
-}
-
-h2 {
   font-size: 60px;
 }
 
-.temperature-description-wrapper {
+h2 {
+  font-size: 50px;
+}
+.temperature-main {
+  text-align: right;
+}
+
+.temperature-wrapper {
   max-width: 230px;
 }
 .time-date-wrapper {
   max-width: 371px;
   padding: 0;
+  text-align: left;
+}
+
+.date-main,
+.time-main {
+  font-size: 25px;
 }
 .more-weather-details-wrapper {
   max-width: 405px;
@@ -92,6 +101,7 @@ h2 {
 a.fahrenheit {
   color: rgba(3, 7, 30, 0.8);
   text-decoration: none;
+  font-size: 30px;
 }
 
 a.fahrenheit:hover {
@@ -101,6 +111,7 @@ a.fahrenheit:hover {
 a.celsius {
   color: rgba(3, 7, 30, 1);
   text-decoration: none;
+  font-size: 30px;
 }
 
 a.celsius:hover {
@@ -127,7 +138,8 @@ h4 {
   font-size: 18px;
 }
 .today {
-  font-size: 40px;
+  font-size: 25px;
+  font-weight: bold;
 }
 .first,
 .second,

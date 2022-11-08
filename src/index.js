@@ -52,11 +52,11 @@ if (seconds < 10) {
 let dayOfTheWeekRealTime = document.querySelector("#current-day");
 dayOfTheWeekRealTime.innerHTML = currentDay;
 
-let currentDate = `Date: ${currentMonth}/${dd}/${yyyy}`;
+let currentDate = `, ${currentMonth} ${dd}`;
 let currentDateRealTime = document.querySelector("#current-date");
 currentDateRealTime.innerHTML = currentDate;
 
-let currentTime = `Time: ${hours}:${minutes}:${seconds}`;
+let currentTime = `${hours}:${minutes}`;
 let currentTimeRealTime = document.querySelector("#current-time");
 currentTimeRealTime.innerHTML = currentTime;
 

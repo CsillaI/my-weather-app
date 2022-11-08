@@ -51,28 +51,22 @@
                   id="current-button"
                 />
               </form>
-
-              <h1 id="city"></h1>
               <div class="row">
-                <div class="col-6 temperature-description-wrapper">
-                  <h2>
-                    <span class="temperature-main" id="temperature"></span
-                    ><a href="#" class="celsius" id="celsius">&deg;C|</a
-                    ><a href="#" class="fahrenheit" id="fahrenheit">&deg;F</a>
-                  </h2>
-                  <p>
-                    <span
-                      class="weather-description"
-                      id="weather-description"
-                    ></span>
-                  </p>
-                </div>
                 <div class="col-6 time-date-wrapper">
-                  <div class="today" id="current-day"></div>
-                  <div class="date-main" id="current-date">
-                    <span class="time-main" id="current-time">T</span>
-                  </div>
+                  <h2 id="city"></h2>
+                  <span class="today" id="current-day"></span>
+                  <span class="date-main" id="current-date"></span>
                   <div class="time-main" id="current-time">T</div>
+                </div>
+
+                <div class="col-sm-2 temperature-wrapper">
+                  <h1>
+                    <span class="temperature-main" id="temperature"></span>
+                  </h1>
+                </div>
+                <div class="col-sm-2 units">
+                  <a href="#" class="celsius" id="celsius">&deg;C|</a
+                  ><a href="#" class="fahrenheit" id="fahrenheit">&deg;F</a>
                 </div>
               </div>
 
@@ -84,6 +78,12 @@
                       id="main-weather-icon"
                     ></i>
                   </h3>
+                  <p>
+                    <span
+                      class="weather-description"
+                      id="weather-description"
+                    ></span>
+                  </p>
                 </div>
                 <div
                   class="col-6 justify-content-evenly more-weather-details-wrapper"
