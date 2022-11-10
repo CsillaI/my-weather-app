@@ -51,60 +51,79 @@
                   id="current-button"
                 />
               </form>
-              <div class="row">
-                <div class="col-6 time-date-wrapper">
-                  <h2 id="city"></h2>
-                  <span class="today" id="current-day"></span>
-                  <span class="date-main" id="current-date"></span>
-                  <div class="time-main" id="current-time">T</div>
+              <div
+                class="d-md-flex"
+                style="margin-top: 10px; margin-bottom: 10px"
+              >
+                <div class="time-date-wrapper">
+                  <h2 class="d-md-flex city" id="city"></h2>
+                  <div class="d-sm-inline-flex">
+                    <span class="today" id="current-day"></span>
+                    <span class="date-main" id="current-date"></span>
+                  </div>
+                  <div class="d-sm-flex time-main" id="current-time">T</div>
                 </div>
 
-                <div class="col-sm-2 temperature-wrapper">
-                  <h1>
+                <div
+                  class="d-sm-inline-flex temperature-wrapper"
+                  style="margin-left: 80px; margin-top: 30px"
+                >
+                  <h1 class="d-sm-inline-flex">
                     <span class="temperature-main" id="temperature"></span>
+                    <span class="d-sm-inline-flex units">
+                      <a href="#" class="celsius" id="celsius">&deg;C|</a
+                      ><a href="#" class="fahrenheit" id="fahrenheit">&deg;F</a>
+                    </span>
                   </h1>
                 </div>
-                <div class="col-sm-2 units">
-                  <a href="#" class="celsius" id="celsius">&deg;C|</a
-                  ><a href="#" class="fahrenheit" id="fahrenheit">&deg;F</a>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-6 main-weather-icon-wrapper">
-                  <h3>
-                    <i
-                      class="fa-solid fa-sun main-weather-icon"
-                      id="main-weather-icon"
-                    ></i>
-                  </h3>
-                  <p>
-                    <span
-                      class="weather-description"
+                <div class="d-flex" style="text-align: left">
+                  <div class="main-weather-icon-wrapper">
+                    <h3 class="d-sm-inline-flex" style="margin-top: 30px">
+                      <i
+                        class="fa-solid fa-sun main-weather-icon"
+                        id="main-weather-icon"
+                      ></i>
+                    </h3>
+                    <div
+                      class="d-sm-flex text-align-left weather-description"
                       id="weather-description"
-                    ></span>
-                  </p>
+                    ></div>
+                  </div>
                 </div>
                 <div
-                  class="col-6 justify-content-evenly more-weather-details-wrapper"
+                  class="d-sm-inline-flex more-weather-details-wrapper"
+                  style="margin-left: 30px"
                 >
                   <h4>
-                    <div class="column justify-content-evenly more-details">
-                      <div class="col-3 more-details-boxes">
+                    <div
+                      class="d-flex flex-column more-details"
+                      style="margin-top: 30px"
+                    >
+                      <div class="more-details-boxes">
                         Feels like:
-                        <div class="feels-like-main" id="feels-like-main">
+                        <div
+                          class="p-1 d-inline-flex feels-like-main"
+                          id="feels-like-main"
+                        >
                           25C
                         </div>
                       </div>
-                      <br />
-                      <div class="col-3 more-details-boxes">
+
+                      <div class="more-details-boxes">
                         Wind:
-                        <div class="wind-main" id="wind-main">10 km/h</div>
+                        <div class="p-1 d-inline-flex wind-main" id="wind-main">
+                          10 km/h
+                        </div>
                       </div>
-                      <br />
-                      <div class="col-3 more-details-boxes">
+
+                      <div class="more-details-boxes">
                         Humidity:
-                        <div class="humidity-main" id="humidity-main">80%</div>
+                        <div
+                          class="p-1 d-inline-flex humidity-main"
+                          id="humidity-main"
+                        >
+                          80%
+                        </div>
                       </div>
                     </div>
                   </h4>

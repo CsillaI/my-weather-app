@@ -58,7 +58,7 @@ body {
 }
 
 .cards {
-  padding-top: 50px;
+  padding-top: 20px;
   margin: 0 auto;
 }
 h1,
@@ -68,34 +68,40 @@ h3 {
 }
 h1 {
   padding-top: 20px;
-  font-size: 60px;
+  font-size: 90px;
 }
 
-h2 {
+h2.city {
   font-size: 50px;
+  line-height: 25px;
+  margin-top: 30px;
 }
 .temperature-main {
   text-align: right;
+  padding: 0px;
+  margin: 0 auto;
 }
 
-.temperature-wrapper {
-  max-width: 230px;
-}
 .time-date-wrapper {
   max-width: 371px;
   padding: 0;
   text-align: left;
 }
 
-.date-main,
+.date-main {
+  font-size: 25px;
+  line-height: 45px;
+}
+
 .time-main {
   font-size: 25px;
+  line-height: 25px;
 }
-.more-weather-details-wrapper {
-  max-width: 405px;
-  text-align: center;
-  display: block;
-  margin: 0 auto;
+
+h1.d-sm-inline-flex {
+  padding: 0px;
+  width: max-content;
+  height: max-content;
 }
 
 a.fahrenheit {
@@ -118,7 +124,7 @@ a.celsius:hover {
   text-decoration: underline;
 }
 
-span.weather-description {
+div.weather-description {
   text-transform: capitalize;
   font-size: 25px;
   display: block;
@@ -140,6 +146,7 @@ h4 {
 .today {
   font-size: 25px;
   font-weight: bold;
+  line-height: 45px;
 }
 .first,
 .second,
@@ -182,10 +189,6 @@ h4 {
     rgb(242, 166, 90) 60%,
     rgb(245, 133, 73) 80%
   );
-}
-
-.main-weather-icon-wrapper {
-  width: 225px;
 }
 
 .more-details {
