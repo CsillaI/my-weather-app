@@ -99,6 +99,13 @@ function showWeather(response) {
   ).innerHTML = `${response.data.temperature.humidity}%`;
 
   document.querySelector("#city").innerHTML = response.data.city;
+
+  document
+    .querySelector("#main-weather-icon")
+    .setAttribute(
+      "src",
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    );
 }
 
 function search(city) {

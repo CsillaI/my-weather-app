@@ -134,8 +134,7 @@ div.weather-description {
 }
 
 h3 .main-weather-icon {
-  font-size: 150px;
-  color: white;
+  width: 150px;
 }
 
 h4 {
