@@ -73,7 +73,7 @@ h1 {
 
 h2.city {
   font-size: 50px;
-  line-height: 25px;
+  line-height: 37px;
   margin-top: 30px;
 }
 .temperature-main {
@@ -203,10 +203,7 @@ h4 {
 .humidity-main {
   font-weight: 400;
 }
-hr {
-  width: 420px;
-  margin-left: 0;
-}
+
 h5 {
   font-size: 25px;
   font-weight: bold;

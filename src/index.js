@@ -80,31 +80,31 @@ celsius.addEventListener("click", showCelsius);
 function showWeather(response) {
   console.log(response);
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
 
   document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].description;
+    response.data.condition.description;
 
   document.querySelector("#feels-like-main").innerHTML = `${Math.round(
-    response.data.main.feels_like
+    response.data.temperature.feels_like
   )}&degC`;
 
   document.querySelector("#wind-main").innerHTML = `${Math.round(
     response.data.wind.speed
-  )} Km/h`;
+  )} km/h`;
 
   document.querySelector(
     "#humidity-main"
-  ).innerHTML = `${response.data.main.humidity}%`;
+  ).innerHTML = `${response.data.temperature.humidity}%`;
 
-  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.city;
 }
 
 function search(city) {
-  let apiKey = "26c3b9ca117cfb48cae7b8b5045e0b6e";
+  let apiKey = "646809et7a8c3ba7374obd5ce9af7bc0";
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showWeather);
 }
@@ -124,9 +124,9 @@ function showWeatherInCurrentLocation(position) {
   let latitude = position.coords.latitude;
   console.log(latitude);
   let longitude = position.coords.longitude;
-  let apiKey = "40ebc0b50ce65146caa1b8728b0cb36d";
+  let apiKey = "646809et7a8c3ba7374obd5ce9af7bc0";
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showWeather);
 }
@@ -139,4 +139,4 @@ function getMyLocation(event) {
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getMyLocation);
 
-search("New York");
+search("Cancun");
