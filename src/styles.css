@@ -242,6 +242,8 @@ div .date {
   background-color: transparent;
 }
 
-.git-link {
+.git-link,
+.linkedIn,
+.netlifyLink {
   text-decoration: none;
 }
