@@ -104,33 +104,42 @@ h1.d-sm-inline-flex {
   height: max-content;
 }
 
+.temperature-wrapper .active {
+  color: rgba(3, 7, 30, 1);
+  cursor: default;
+  text-decoration: none;
+}
+.temperature-wrapper .active:hover {
+  text-decoration: none;
+}
+
 a.fahrenheit {
-  color: rgba(3, 7, 30, 0.8);
   text-decoration: none;
   font-size: 30px;
 }
 
 a.fahrenheit:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a.celsius {
-  color: rgba(3, 7, 30, 1);
   text-decoration: none;
   font-size: 30px;
 }
 
 a.celsius:hover {
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+.temperature-wrapper .units-separator {
+  font-size: 30px;
 }
 
 div.weather-description {
   text-transform: capitalize;
-  font-size: 25px;
-  display: block;
-  margin: 0 auto;
-  text-align: left;
-  line-height: 25px;
+  font-size: 20px;
+
+  line-height: 30px;
 }
 
 h3 .main-weather-icon {

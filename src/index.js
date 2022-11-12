@@ -61,27 +61,38 @@ let currentTimeRealTime = document.querySelector("#current-time");
 currentTimeRealTime.innerHTML = currentTime;
 
 //Temperature Convertor:
-function showFahrenheit() {
-  document.querySelector("#temperature").innerHTML = `77`;
+function showFahrenheit(event) {
+  event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
+  document.querySelector("#temperature-main").innerHTML = fahrenheitTemperature;
 }
 
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", showFahrenheit);
 
-function showCelsius() {
-  document.querySelector("#temperature").innerHTML = `25`;
+function showCelsius(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  document.querySelector("#temperature-main").innerHTML =
+    Math.round(celsiusTemperature);
 }
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsius);
 
+let celsiusTemperature = null;
+
 //Search Engine
 
 function showWeather(response) {
   console.log(response);
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.temperature.current
-  );
+  celsiusTemperature = response.data.temperature.current;
+
+  document.querySelector("#temperature-main").innerHTML =
+    Math.round(celsiusTemperature);
 
   document.querySelector("#weather-description").innerHTML =
     response.data.condition.description;
@@ -129,7 +140,6 @@ searchCity.addEventListener("submit", handleSubmit);
 
 function showWeatherInCurrentLocation(position) {
   let latitude = position.coords.latitude;
-  console.log(latitude);
   let longitude = position.coords.longitude;
   let apiKey = "646809et7a8c3ba7374obd5ce9af7bc0";
   let units = "metric";
