@@ -62,10 +62,6 @@
                     <span class="date-main" id="current-date"></span>
                   </div>
                   <div class="d-sm-flex time-main" id="current-time">T</div>
-                  <div
-                    class="d-sm-flex align-content-sm-left weather-description"
-                    id="weather-description"
-                  ></div>
                 </div>
                 <div class="d-flex" style="text-align: right">
                   <div class="main-weather-icon-wrapper">
@@ -106,6 +102,11 @@
                       class="d-flex flex-column more-details"
                       style="margin-top: 30px"
                     >
+                      <div
+                        class="d-sm-flex align-content-sm-left weather-description"
+                        id="weather-description"
+                      ></div>
+                      <hr class="horizontal-line" />
                       <div class="more-details-boxes">
                         Feels like:
                         <div
@@ -138,135 +139,35 @@
               </div>
             </div>
           </div>
-          <div class="row cards">
-            <div class="col">
-              <div class="row">
-                <div class="col">
-                  <div class="card first">
-                    <div class="card-body">
-                      <h5 class="card-title">Saturday</h5>
-                      <div class="card-text">
-                        <div class="date">Oct 1</div>
-                        <i class="fa-solid fa-sun sun-emoji"></i>
-                        <div class="precipitation">0.8 mm</div>
-                        <div class="temperature">
-                          <span class="high-temperature">25&deg;</span>/14&deg;
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col">
-                  <div class="card second">
-                    <div class="card-body">
-                      <h5 class="card-title">Sunday</h5>
-                      <div class="card-text">
-                        <div class="date">Oct 2</div>
-                        <i
-                          class="fa-solid fa-cloud-sun partly-cloudy-emoji"
-                        ></i>
 
-                        <div class="precipitation">0.2 mm</div>
-                        <div class="temperature">
-                          <span class="high-temperature">15&deg;</span>/9&deg;
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col">
-                  <div class="card third">
-                    <div class="card-body">
-                      <h5 class="card-title">Monday</h5>
-                      <div class="card-text">
-                        <div class="date">Oct 3</div>
-                        <i
-                          class="fa-solid fa-cloud-sun-rain sun-cloud-rain-emoji"
-                        ></i>
-                        <div class="precipitation">0.4 mm</div>
-                        <div class="temperature">
-                          <span class="high-temperature">14&deg;</span>/7&deg;
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col">
-                  <div class="card fourth">
-                    <div class="card-body">
-                      <h5 class="card-title">Tuesday</h5>
-                      <div class="card-text">
-                        <div class="date">Oct 4</div>
-                        <i
-                          class="fa-solid fa-cloud-sun partly-cloudy-emoji"
-                        ></i>
-                        <div class="precipitation">0 mm</div>
-                        <div class="temperature">
-                          <span class="high-temperature">13&deg;</span>/7&deg;
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="row">
-                <div class="col">
-                  <div class="card fifth">
-                    <div class="card-body">
-                      <h5 class="card-title">Wednesday</h5>
-                      <div class="card-text">
-                        <div class="date">Oct 5</div>
-                        <i
-                          class="fa-solid fa-cloud-sun partly-cloudy-emoji"
-                        ></i>
-                        <div class="precipitation">0 mm</div>
-                        <div class="temperature">
-                          <span class="high-temperature">15&deg;</span>/6&deg;
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="weather-forecast" id="weather-forecast"></div>
         </div>
       </div>
     </div>
     <small class="author">
-      <a
-        href="https://github.com/CsillaI/my-weather-app"
-        target="_blank"
-        class="git-link"
-        >Open-sourced code </a
-      >by
-      <a
-        href="https://www.linkedin.com/in/csilla-i-587b9474/"
-        target="_blank"
-        class="linkedIn"
-        >Csilla Ihnatiuc</a
-      >
-      & hosted on<a
-        href="https://bespoke-melomakarona-f38b91.netlify.app/"
-        target="_blank"
-        class="netlifyLink"
-      >
-        Netlify.</a
-      >
+      <span>
+        Designed & Coded by
+        <a
+          href="https://www.linkedin.com/in/csilla-i-587b9474/"
+          target="_blank"
+          class="linkedIn-link"
+          >Csilla Ihnatiuc</a
+        >, open sourced on
+        <a
+          href="https://github.com/CsillaI/my-weather-app"
+          target="_blank"
+          class="git-link"
+          >GitHub
+        </a>
+        & hosted on
+        <a
+          href="https://bespoke-melomakarona-f38b91.netlify.app/"
+          target="_blank"
+          class="netlify-link"
+        >
+          Netlify</a
+        >!
+      </span>
     </small>
     <script src="src/index.js"></script>
   </body>

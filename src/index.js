@@ -156,4 +156,38 @@ function getMyLocation(event) {
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getMyLocation);
 
+function showForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `        
+              <div class="card text-center first" style="width: 9rem">
+                <div class="card-body">
+                  <h5 class="card-title">${day}</h5>
+                  <div class="card-text">
+                    <div class="date">Oct 1</div>
+                    <img
+                      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                      alt="cloudy icon"
+                    />
+                    <div class="temperature">
+                      <span class="max-temp">25&deg;</span>
+                      <span class="temperature-separator">/</span>
+                      <span class="min-temp">14&deg;</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+showForecast();
 search("Cancun");

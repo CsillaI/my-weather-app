@@ -57,10 +57,10 @@ body {
   max-width: 900px;
 }
 
-.cards {
-  padding-top: 20px;
-  margin: 0 auto;
+.card-body {
+  padding: 16px 0px 10px 0px;
 }
+
 h1,
 h2,
 h3 {
@@ -120,6 +120,7 @@ a.fahrenheit {
 
 a.fahrenheit:hover {
   text-decoration: none;
+  cursor: default;
 }
 
 a.celsius {
@@ -129,28 +130,13 @@ a.celsius {
 
 a.celsius:hover {
   text-decoration: none;
+  cursor: default;
 }
 
 .temperature-wrapper .units-separator {
   font-size: 30px;
 }
 
-div.weather-description {
-  text-transform: capitalize;
-  font-size: 20px;
-
-  line-height: 30px;
-}
-
-h3 .main-weather-icon {
-  width: 150px;
-}
-
-h4 {
-  max-width: 450px;
-  text-align: center;
-  font-size: 18px;
-}
 .today {
   font-size: 25px;
   font-weight: bold;
@@ -199,8 +185,30 @@ h4 {
   );
 }
 
+div.weather-description {
+  text-transform: capitalize;
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: bolder;
+}
+
+h3 .main-weather-icon {
+  width: 150px;
+}
+
+.temperature {
+  font-size: 25px;
+}
+
+.horizontal-line {
+  margin: 0 auto;
+  width: 132px;
+  color: rgba(3, 7, 30, 1);
+}
+
 .more-details {
-  text-align: center;
+  text-align: left;
+  font-size: 17px;
 }
 
 .more-details-boxes {
@@ -225,17 +233,14 @@ div .date {
   color: white;
   font-size: 40px;
 }
-.temperature {
-  font-size: 25px;
-}
 
-.high-temperature {
+.max-temp {
   font-weight: bold;
 }
 
 .author {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   margin-bottom: 25px;
@@ -243,7 +248,7 @@ div .date {
 }
 
 .git-link,
-.linkedIn,
-.netlifyLink {
+.linkedIn-link,
+.netlify-link {
   text-decoration: none;
 }
