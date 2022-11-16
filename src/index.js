@@ -117,6 +117,8 @@ function showWeather(response) {
       "src",
       `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
     );
+
+  getForecast(response.data.coordinates);
 }
 
 function search(city) {
@@ -156,7 +158,11 @@ function getMyLocation(event) {
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", getMyLocation);
 
-function showForecast() {
+//Daily Forecast
+
+function showForecast(response) {
+  console.log(response.data.daily);
+
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -189,5 +195,16 @@ function showForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-showForecast();
+function getForecast(coordinates) {
+  let apiKey = "646809et7a8c3ba7374obd5ce9af7bc0";
+  let lon = coordinates.longitude;
+  let lat = coordinates.latitude;
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${lat}&lon=${lon}&key=${apiKey}&units=${units}`;
+
+  console.log(apiUrl);
+
+  axios.get(apiUrl).then(showForecast);
+}
+
 search("Cancun");

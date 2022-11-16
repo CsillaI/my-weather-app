@@ -187,7 +187,7 @@ a.celsius:hover {
 
 div.weather-description {
   text-transform: capitalize;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 30px;
   font-weight: bolder;
 }
@@ -208,7 +208,7 @@ h3 .main-weather-icon {
 
 .more-details {
   text-align: left;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .more-details-boxes {
