@@ -201,7 +201,8 @@ h3 .main-weather-icon {
 }
 
 .horizontal-line {
-  margin: 0 auto;
+  margin: 0;
+  text-align: left;
   width: 132px;
   color: rgba(3, 7, 30, 1);
 }

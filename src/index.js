@@ -1,6 +1,5 @@
 //Update Date in real time
 let today = new Date();
-console.log(today);
 
 let day = today.getDay();
 let days = [
@@ -160,35 +159,78 @@ currentButton.addEventListener("click", getMyLocation);
 
 //Daily Forecast
 
+function formatForecastDay(timestamp) {
+  let today = new Date(timestamp * 1000);
+
+  let day = today.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function formatForecastDate(timestamp) {
+  let today = new Date(timestamp * 1000);
+
+  let date = today.getDate();
+  let month = today.getMonth();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  return months[month] + " " + date;
+}
+
 function showForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `        
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `        
               <div class="card text-center first" style="width: 9rem">
                 <div class="card-body">
-                  <h5 class="card-title">${day}</h5>
+                  <h5 class="card-title">${formatForecastDay(
+                    forecastDay.time
+                  )}</h5>
                   <div class="card-text">
-                    <div class="date">Oct 1</div>
+                    <div class="date">${formatForecastDate(
+                      forecastDay.time
+                    )}</div>
                     <img
-                      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+                      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                        forecastDay.condition.icon
+                      }.png"
                       alt="cloudy icon"
                     />
                     <div class="temperature">
-                      <span class="max-temp">25&deg;</span>
+                      <span class="max-temp">${Math.round(
+                        forecastDay.temperature.maximum
+                      )}&deg;</span>
                       <span class="temperature-separator">/</span>
-                      <span class="min-temp">14&deg;</span>
+                      <span class="min-temp">${Math.round(
+                        forecastDay.temperature.minimum
+                      )}&deg;</span>
                     </div>
                   </div>
                 </div>
               </div>
             `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -201,8 +243,6 @@ function getForecast(coordinates) {
   let lat = coordinates.latitude;
   let units = "metric";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${lat}&lon=${lon}&key=${apiKey}&units=${units}`;
-
-  console.log(apiUrl);
 
   axios.get(apiUrl).then(showForecast);
 }
