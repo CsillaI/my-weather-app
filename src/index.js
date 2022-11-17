@@ -1,63 +1,59 @@
-//Update Date in real time
-let today = new Date();
+//Date & Time
 
-let day = today.getDay();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let currentDay = days[today.getDay()];
+function formatDay(timestamp) {
+  let today = new Date(timestamp * 1000);
 
-let mm = today.getMonth();
-let months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sept",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-
-let currentMonth = months[today.getMonth()];
-
-let dd = today.getDate();
-let yyyy = today.getFullYear();
-
-let hours = today.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let minutes = today.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-let seconds = today.getSeconds();
-if (seconds < 10) {
-  seconds = `0${seconds}`;
+  let day = today.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
 }
 
-//Modifying HTML for current day/time/date:
-let dayOfTheWeekRealTime = document.querySelector("#current-day");
-dayOfTheWeekRealTime.innerHTML = currentDay;
+function formatDate(timestamp) {
+  let today = new Date(timestamp * 1000);
 
-let currentDate = `, ${currentMonth} ${dd}`;
-let currentDateRealTime = document.querySelector("#current-date");
-currentDateRealTime.innerHTML = currentDate;
+  let mm = today.getMonth();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
-let currentTime = `${hours}:${minutes}`;
-let currentTimeRealTime = document.querySelector("#current-time");
-currentTimeRealTime.innerHTML = currentTime;
+  let dd = today.getDate();
+
+  return "," + " " + months[mm] + " " + dd;
+}
+
+function formatTime(timestamp) {
+  let today = new Date(timestamp * 1000);
+
+  let hours = today.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = today.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return hours + ":" + minutes;
+}
 
 //Temperature Convertor:
 function showFahrenheit(event) {
@@ -109,6 +105,18 @@ function showWeather(response) {
   ).innerHTML = `${response.data.temperature.humidity}%`;
 
   document.querySelector("#city").innerHTML = response.data.city;
+
+  document.querySelector("#current-day").innerHTML = formatDay(
+    response.data.time
+  );
+
+  document.querySelector("#current-date").innerHTML = formatDate(
+    response.data.time
+  );
+
+  document.querySelector("#current-time").innerHTML = formatTime(
+    response.data.time
+  );
 
   document
     .querySelector("#main-weather-icon")
