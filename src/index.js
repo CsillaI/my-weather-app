@@ -203,7 +203,7 @@ function showForecast(response) {
 
   let forecastElement = document.querySelector("#weather-forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row forecast-wrapper">`;
 
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
@@ -255,4 +255,4 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(showForecast);
 }
 
-search("Cancun");
+search("Cluj-Napoca");
