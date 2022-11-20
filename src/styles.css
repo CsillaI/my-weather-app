@@ -182,12 +182,11 @@ h3 .main-weather-icon {
 }
 
 .horizontal-line {
-  border: none;
-  border-top: 3px double;
+  border: solid 1px #fff;
   margin: 0;
   text-align: left;
   width: 132px;
-  color: #fff;
+
   size: 20px;
 }
 
