@@ -37,6 +37,31 @@ function formatDate(timestamp) {
 
   let dd = today.getDate();
 
+  let bodyElement = document.querySelector(".app");
+
+  if (months[mm] === "Mar" || months[mm] === "Apr" || months[mm] === "May") {
+    bodyElement.style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/821/original/springGrass.jpg?1668979640")`;
+  } else {
+    if (months[mm] === "Jun" || months[mm] === "Jul" || months[mm] === "Aug") {
+      bodyElement.style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/822/original/summerSun.jpg?1668979647")`;
+    } else {
+      if (
+        months[mm] === "Sep" ||
+        months[mm] === "Oct" ||
+        months[mm] === "Nov"
+      ) {
+        bodyElement.style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/820/original/fallColorfulTrees.jpg?1668979630")`;
+      } else {
+        if (
+          months[mm] === "Dec" ||
+          months[mm] === "Jan" ||
+          months[mm] === "Feb"
+        ) {
+          bodyElement.style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/550/original/winterLandscape.jpg?1668800948")`;
+        }
+      }
+    }
+  }
   return "," + " " + months[mm] + " " + dd;
 }
 
@@ -195,6 +220,7 @@ function formatForecastDate(timestamp) {
     "Nov",
     "Dec",
   ];
+
   return months[month] + " " + date;
 }
 
@@ -228,11 +254,11 @@ function showForecast(response) {
                     <div class="temperature">
                       <span class="max-temp">${Math.round(
                         forecastDay.temperature.maximum
-                      )}&deg;</span>
+                      )}&degC</span>
                       <span class="temperature-separator">/</span>
                       <span class="min-temp">${Math.round(
                         forecastDay.temperature.minimum
-                      )}&deg;</span>
+                      )}&degC</span>
                     </div>
                   </div>
                 </div>

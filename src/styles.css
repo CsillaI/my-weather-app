@@ -1,5 +1,4 @@
 body {
-  background-image: url("../images/winterlandscape.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -183,10 +182,13 @@ h3 .main-weather-icon {
 }
 
 .horizontal-line {
+  border: none;
+  border-top: 3px double;
   margin: 0;
   text-align: left;
   width: 132px;
-  color: rgba(3, 7, 30, 1);
+  color: #fff;
+  size: 20px;
 }
 
 .more-details {
@@ -245,5 +247,6 @@ div .date {
 .git-link,
 .linkedIn-link,
 .netlify-link {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #fff;
 }
