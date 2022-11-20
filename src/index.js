@@ -50,7 +50,7 @@ function formatDate(timestamp) {
         months[mm] === "Oct" ||
         months[mm] === "Nov"
       ) {
-        bodyElement.style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/820/original/fallColorfulTrees.jpg?1668979630")`;
+        bodyElement.style.backgroundImage = `url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/827/original/fallLeaves.jpg?1668982319")`;
       } else {
         if (
           months[mm] === "Dec" ||
