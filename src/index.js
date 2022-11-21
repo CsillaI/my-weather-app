@@ -108,7 +108,6 @@ let celsiusTemperature = null;
 //Search Engine
 
 function showWeather(response) {
-  console.log(response);
   celsiusTemperature = response.data.temperature.current;
 
   document.querySelector("#temperature-main").innerHTML =
