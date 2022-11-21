@@ -211,7 +211,7 @@ div .date {
   border-color: white;
   border-top-left-radius: 60px;
   border-bottom-right-radius: 60px;
-  background: rgba(220, 236, 252, 1);
+  background: rgba(220, 236, 252, 0.5);
 }
 
 .weather-forecast {
