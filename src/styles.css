@@ -50,25 +50,25 @@ body {
 
 .search-button {
   background: rgba(181, 101, 118, 1);
-  border-color: rgba(3, 7, 30, 1);
+  border-color: white;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 1.075) !important;
   transition: all 150ms ease-in-out;
 }
 .btn.search-button:hover {
   background-color: rgba(92, 99, 106, 1);
-  border-color: rgba(3, 7, 30, 1);
+  border-color: whitesmoke;
   cursor: pointer;
 }
 
 .current-button {
   background: rgba(92, 99, 106, 1);
-  border-color: rgba(3, 7, 30, 1);
+  border-color: white;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 1.075) !important;
   transition: all 150ms ease-in-out;
 }
 .btn.current-button:hover {
   background: rgba(181, 101, 118, 1);
-  border-color: rgba(3, 7, 30, 1);
+  border-color: whitesmoke;
   cursor: pointer;
 }
 
@@ -146,6 +146,10 @@ a.celsius:hover {
 
 .temperature-wrapper .units-separator {
   font-size: 30px;
+}
+
+.units-separator {
+  color: rgba(3, 7, 30, 1);
 }
 
 .today {
